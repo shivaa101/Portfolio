@@ -1,0 +1,167 @@
+// ---------------------------------------------------------------------------
+// Project catalogue. `tags` drives the filter bar in Projects.jsx.
+// Allowed filter tags: Salesforce | Apex | LWC | React | Full Stack
+// Replace the placeholder links with real URLs when available.
+// ---------------------------------------------------------------------------
+export const projectFilters = ['All', 'Salesforce', 'Apex', 'LWC', 'React', 'Full Stack'];
+
+export const projects = [
+  {
+    id: 'school-admission',
+    title: 'School Admission & Fee Collection System',
+    tagline: 'Salesforce CRM for the full student lifecycle — enquiry to receipt.',
+    description:
+      'An end-to-end Salesforce CRM solution that converts admission enquiries into enrolled students and manages the money that follows. Leads captured from enquiry channels are qualified and converted into Person Accounts with an Opportunity per admission. Fee Structure records drive automated fee calculation, merit-based discounts and approval routing, while Receipts track every payment against the student. Post-admission queries are handled through Case management with the platform security model restricting who can view financial data.',
+    featured: true,
+    icon: 'GraduationCap',
+    accent: 'from-sf-500/25 to-cyan-400/10',
+    tags: ['Salesforce', 'Apex', 'Full Stack'],
+    technologies: ['Salesforce CRM', 'Apex', 'Salesforce Flow', 'SOQL', 'Validation Rules', 'Approval Process'],
+    objects: [
+      'Lead',
+      'Person Account',
+      'Contact',
+      'Opportunity',
+      'Fee Structure',
+      'Receipt',
+      'Case',
+      'Products',
+      'Orders',
+    ],
+    features: [
+      'Student admission management from lead capture through conversion to Person Account',
+      'Automated fee calculation from Fee Structure records mapped to courses and Products/Orders',
+      'Merit-based discount automation applied on the admission Opportunity',
+      'Payment tracking with Receipt records, outstanding balance rollups and payment history',
+      'Approval process routing low-merit admissions to the Principal for a decision',
+      'Case management for admission, documentation and fee queries',
+      'Validation rules protecting marks, fee amounts and discount integrity',
+      'Record-triggered and screen Flows orchestrating the entire admission journey',
+      'Security configuration with profiles, permission sets, roles and sharing rules',
+    ],
+    logic: {
+      title: 'Discount automation logic',
+      rows: [
+        { condition: 'Marks > 90', result: '30% discount' },
+        { condition: 'Marks 80 – 90', result: '15% discount' },
+        { condition: 'Marks 70 – 80', result: '5% discount' },
+        { condition: 'Marks < 60', result: 'Principal approval required' },
+      ],
+    },
+    impact: [
+      'Removed manual fee spreadsheets by centralising fees, discounts and receipts in the CRM',
+      'Made discount decisions consistent and auditable instead of case-by-case',
+    ],
+    links: { github: 'YOUR_GITHUB', demo: '' },
+  },
+  {
+    id: 'farming-org',
+    title: 'Farming Organization Management System',
+    tagline: 'CRM for farm land, crops, shared resources and farm economics.',
+    description:
+      'A Salesforce CRM built for agricultural organizations that need one system for land, crops, cost and revenue. Farmer Accounts and Contacts sit at the centre, with Farm Land and Crop records tracking what is cultivated where and in which season. Shared Resource records manage allocation of equipment and irrigation across farms, while Expense and Revenue records give per-crop profitability. Flow automation keeps crop stages and financial rollups current, and Cases capture field issues raised by farmers.',
+    featured: true,
+    icon: 'Sprout',
+    accent: 'from-emerald-400/20 to-sf-500/10',
+    tags: ['Salesforce', 'Apex'],
+    technologies: ['Salesforce CRM', 'Apex', 'Salesforce Flow', 'SOQL', 'Reports & Dashboards'],
+    objects: [
+      'Account',
+      'Contact',
+      'Opportunity',
+      'Case',
+      'Farm Land',
+      'Crop',
+      'Shared Resource',
+      'Expense',
+      'Revenue',
+    ],
+    features: [
+      'Farm management with Farm Land records linked to farmer Accounts and geography',
+      'Crop tracking across sowing, growth and harvest stages per season',
+      'Expense and revenue tracking rolled up to crop and farm level profitability',
+      'Shared resource management for equipment, irrigation and labour allocation',
+      'Case management for field issues, complaints and support requests',
+      'Flow automation for stage transitions, resource conflicts and financial rollups',
+      'Salesforce security model scoping data per farm, region and role hierarchy',
+    ],
+    impact: [
+      'Single source of truth for land, crop and cost data across multiple farms',
+      'Per-crop profitability visible without offline reconciliation',
+    ],
+    links: { github: 'YOUR_GITHUB', demo: '' },
+  },
+  {
+    id: 'myntra-lwc',
+    title: 'Myntra-Style E-Commerce Storefront on Salesforce',
+    tagline: 'Product catalogue UI built entirely with LWC and Apex.',
+    description:
+      'A responsive, Myntra-inspired shopping experience implemented natively on the Salesforce Platform. Lightning Web Components render the home page, catalogue grid and product detail view, all hydrated with live product data from Salesforce through a ProductController Apex class. The build focuses on clean Apex ↔ LWC communication, parent-child component composition, event-driven navigation and a mobile-first layout that keeps the retail feel while staying inside the platform.',
+    featured: true,
+    icon: 'ShoppingBag',
+    accent: 'from-fuchsia-400/20 to-sf-500/10',
+    tags: ['Salesforce', 'LWC', 'Apex'],
+    technologies: ['Salesforce', 'Apex', 'LWC', 'JavaScript', 'HTML', 'CSS'],
+    objects: ['Product2', 'Pricebook Entry', 'Custom Product Metadata'],
+    components: ['myntraHomePage', 'productsPage', 'productDetailPage', 'ProductController.cls'],
+    features: [
+      'Product listing grid with category banners and a responsive card layout',
+      'Product detail page with imagery, pricing, sizes and description',
+      'Dynamic data sourced from Salesforce records rather than hardcoded arrays',
+      'Apex ↔ LWC communication via @AuraEnabled(cacheable=true) methods and wire adapters',
+      'Custom events for component-to-component navigation and selection state',
+      'Fully responsive UI tuned for desktop, tablet and mobile',
+    ],
+    impact: [
+      'Proves consumer-grade UI is achievable inside Salesforce with LWC',
+      'Reusable catalogue components that drop into any Lightning page',
+    ],
+    links: { github: 'YOUR_GITHUB', demo: '' },
+  },
+  {
+    id: 'agentforce-case',
+    title: 'Agentforce Case Management Agent',
+    tagline: 'Conversational case status lookup powered by Agentforce + Apex.',
+    description:
+      'An Agentforce agent that lets customers and support staff check case status in natural language instead of navigating the CRM. The agent asks for a Case Number, calls an Apex invocable method to retrieve the matching record, and responds with status, priority, owner and the latest update in a plain conversational sentence. Reasoning instructions keep the agent scoped to case topics, and a subagent handles escalation-style follow-up questions.',
+    featured: true,
+    icon: 'Bot',
+    accent: 'from-sky-400/25 to-indigo-400/10',
+    tags: ['Salesforce', 'Apex'],
+    technologies: ['Agentforce', 'Apex Invocable Methods', 'SOQL', 'Salesforce Case Management', 'CRM Automation'],
+    objects: ['Case', 'Contact', 'Account', 'Case Comment'],
+    features: [
+      'Prompts the user for a Case Number and validates the input before querying',
+      'Fetches live case status through an Apex invocable action',
+      'Returns relevant case information: status, priority, owner, created date and last update',
+      'Answers in a simple natural-language response instead of raw field values',
+      'Reasoning instructions that keep the agent on-topic and prevent hallucinated data',
+      'Subagent handling of follow-up and escalation intents',
+      'Graceful fallback when the case number does not exist or access is restricted',
+    ],
+    impact: [
+      'Cuts routine "what is my case status" traffic away from support agents',
+      'Shows AI-assisted CRM automation grounded in real Salesforce data',
+    ],
+    links: { github: 'YOUR_GITHUB', demo: '' },
+  },
+  {
+    id: 'portfolio',
+    title: 'Developer Portfolio — React + Vite',
+    tagline: 'This site: component-driven React front end with Tailwind CSS.',
+    description:
+      'A production-quality single-page portfolio built with React, Vite and Tailwind CSS. Content lives in typed data arrays, sections are independent components, and scroll reveals use a shared IntersectionObserver hook rather than an animation dependency. Includes an active-section navigation indicator, accessible semantics and a fully responsive layout.',
+    featured: false,
+    icon: 'Layers',
+    accent: 'from-slate-300/15 to-sf-500/10',
+    tags: ['React', 'Full Stack'],
+    technologies: ['React.js', 'Vite', 'JavaScript', 'Tailwind CSS', 'Lucide React'],
+    features: [
+      'Reusable section components driven by data arrays',
+      'Custom IntersectionObserver hooks for reveal animations and active nav state',
+      'Accessible semantic HTML, labelled controls and keyboard-friendly navigation',
+      'Responsive layout across desktop, laptop, tablet and mobile',
+    ],
+    links: { github: 'YOUR_GITHUB', demo: '' },
+  },
+];

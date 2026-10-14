@@ -1,0 +1,8 @@
+Place your resume PDF in this folder and name it exactly:
+
+    resume.pdf
+
+It will be served at https://your-site.com/resume.pdf and is what every
+"Download Resume" button links to (see `resume` in src/data/site.js).
+
+You can delete this file.

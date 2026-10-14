@@ -1,0 +1,137 @@
+// Skill groups rendered as technology badge cards (no percentage bars).
+export const skillGroups = [
+  {
+    id: 'salesforce',
+    title: 'Salesforce',
+    icon: 'Cloud',
+    blurb: 'Declarative + programmatic CRM development on the Salesforce Platform.',
+    skills: [
+      { name: 'Apex', level: 'Advanced' },
+      { name: 'Lightning Web Components', level: 'Advanced' },
+      { name: 'SOQL', level: 'Advanced' },
+      { name: 'SOSL', level: 'Proficient' },
+      { name: 'Salesforce Flow', level: 'Advanced' },
+      { name: 'Agentforce', level: 'Proficient' },
+      { name: 'Administration', level: 'Advanced' },
+      { name: 'REST API Integrations', level: 'Proficient' },
+    ],
+  },
+  {
+    id: 'frontend',
+    title: 'Frontend',
+    icon: 'MonitorSmartphone',
+    blurb: 'Component-driven, accessible and responsive interfaces.',
+    skills: [
+      { name: 'React.js', level: 'Advanced' },
+      { name: 'JavaScript (ES6+)', level: 'Advanced' },
+      { name: 'HTML5', level: 'Advanced' },
+      { name: 'CSS3', level: 'Advanced' },
+      { name: 'Tailwind CSS', level: 'Proficient' },
+    ],
+  },
+  {
+    id: 'backend',
+    title: 'Backend & Data',
+    icon: 'Database',
+    blurb: 'APIs, data modeling and persistence beyond the platform.',
+    skills: [
+      { name: 'Node.js', level: 'Proficient' },
+      { name: 'Express.js', level: 'Proficient' },
+      { name: 'SQL', level: 'Advanced' },
+      { name: 'MongoDB', level: 'Proficient' },
+      { name: 'Python', level: 'Proficient' },
+      { name: 'C++', level: 'Proficient' },
+    ],
+  },
+  {
+    id: 'tools',
+    title: 'Tools & DevOps',
+    icon: 'Wrench',
+    blurb: 'Version control, deployment and day-to-day developer tooling.',
+    skills: [
+      { name: 'Git', level: 'Advanced' },
+      { name: 'GitHub', level: 'Advanced' },
+      { name: 'Salesforce CLI', level: 'Proficient' },
+      { name: 'VS Code', level: 'Advanced' },
+      { name: 'Docker', level: 'Familiar' },
+      { name: 'Linux', level: 'Proficient' },
+    ],
+  },
+];
+
+// Salesforce Expertise section — grouped platform capabilities.
+export const salesforceExpertise = [
+  {
+    id: 'apex',
+    title: 'Apex Development',
+    icon: 'Code2',
+    items: [
+      'Apex Classes',
+      'Apex Triggers',
+      'Trigger Handler Pattern',
+      'Test Classes',
+      'Batch Apex',
+      'Scheduled Apex',
+      'Queueable Apex',
+      'Invocable Methods',
+    ],
+  },
+  {
+    id: 'query',
+    title: 'Data & Querying',
+    icon: 'Search',
+    items: ['SOQL', 'SOSL', 'Relationship Queries', 'Data Modeling', 'Data Loader', 'Bulk Data Handling'],
+  },
+  {
+    id: 'ui',
+    title: 'UI Development',
+    icon: 'LayoutDashboard',
+    items: [
+      'Lightning Web Components',
+      'Apex ↔ LWC Wiring',
+      'Wire Adapters',
+      'Lightning App Builder',
+      'Responsive SLDS Layouts',
+    ],
+  },
+  {
+    id: 'automation',
+    title: 'Automation',
+    icon: 'Workflow',
+    items: [
+      'Record-Triggered Flows',
+      'Screen Flows',
+      'Scheduled Flows',
+      'Validation Rules',
+      'Approval Processes',
+      'Email Alerts',
+    ],
+  },
+  {
+    id: 'security',
+    title: 'Security Model',
+    icon: 'ShieldCheck',
+    items: [
+      'Profiles',
+      'Permission Sets',
+      'Roles',
+      'Sharing Rules',
+      'Object-Level Security',
+      'Field-Level Security',
+      'Record-Level Security',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'Agentforce & Integrations',
+    icon: 'Bot',
+    items: [
+      'Agentforce Agents',
+      'Subagents',
+      'Reasoning Instructions',
+      'Apex Invocable Actions',
+      'REST API Integrations',
+      'Named Credentials',
+    ],
+  },
+];
